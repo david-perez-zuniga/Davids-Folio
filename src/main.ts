@@ -1,6 +1,7 @@
 const pharses = ["Scalable Backends", "Clean Frontend", "My Dreams"];
 const txt_role = document.querySelector(".role-text");
 const btn_proyects = document.getElementById("btn-projects") as HTMLButtonElement
+const btn_about = document.getElementById("btn*about") as HTMLButtonElement
 let actual_phare = pharses[0];
 let i = 0;
 let currentPharses = 0
@@ -30,4 +31,9 @@ function WritePhareses(){
 btn_proyects.addEventListener("click", (e)=>{
     e.preventDefault()
     window.location.replace("/Body/proyect_body.html")
+})
+
+btn_about.addEventListener("click", (e)=>{
+    e.preventDefault()
+    window.location.replace("/Body/about_body.html")
 })
