@@ -1,13 +1,38 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>davids-folio</title>
+    <title>David | Full Stack Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/src/main.ts"></script> 
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    
+    <div class="bg-overlay"></div>
+
+    <main id="app">
+      <section class="hero">
+        <div class="hero-content">
+          <h2 class="subtitle">HOLA, SOY DAVID</h2>
+          <h1 class="title">BACKEND <span class="neon-text">DEV</span></h1>
+          
+          <div class="dynamic-role-container">
+            <span class="role-prefix">I build </span>
+            <span id="dynamic-text" class="role-text"></span><span class="cursor">|</span>
+          </div>
+
+          <div class="cta-container">
+            <button id="btn-projects" class="btn btn-primary">VER PROYECTOS</button>
+            <button id="btn-contact" class="btn btn-outline">CONTACTAR</button>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

@@ -1,0 +1,177 @@
+:root {
+--bg-dark: #0a0a0a;
+--text-primary: #ffffff;
+--text-secondary: #a1a1a1;
+--neon-accent: #00ff9d;
+--neon-glow: 0 0 10px rgba(0, 255, 157, 0.5);
+--font-main: 'Montserrat', sans-serif;
+--font-code: 'Roboto Mono', monospace;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+background-color: var(--bg-dark);
+color: var(--text-primary);
+font-family: var(--font-main);
+overflow-x: hidden; /* Evita scroll horizontal indeseado */
+}
+
+/* Fondo */
+.bg-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('/bg-gym.jpg');
+background-size: cover;
+background-position: center;
+opacity: 0.15;
+z-index: -1;
+}
+
+.hero {
+  /* Usamos min-height en vez de height para que no se corte en móviles si giras la pantalla */
+min-height: 100vh; 
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 20px;
+}
+
+.hero-content {
+max-width: 800px;
+width: 100%;
+}
+
+.subtitle {
+font-size: 1.2rem;
+letter-spacing: 4px;
+color: var(--text-secondary);
+margin-bottom: 1rem;
+text-transform: uppercase;
+font-weight: 700;
+}
+
+.title {
+font-size: 4rem; /* Grande en PC */
+line-height: 1.1;
+font-weight: 900;
+text-transform: uppercase;
+margin-bottom: 1.5rem;
+}
+
+.neon-text {
+color: var(--neon-accent);
+text-shadow: var(--neon-glow);
+}
+
+.dynamic-role-container {
+font-family: var(--font-code);
+font-size: 1.5rem;
+margin-bottom: 3rem;
+height: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.cursor {
+animation: blink 1s infinite;
+color: var(--neon-accent);
+}
+
+/* Botones */
+.cta-container {
+display: flex;
+gap: 20px;
+justify-content: center;
+  flex-wrap: wrap; /* Permite que bajen si no caben */
+}
+
+.btn {
+padding: 15px 35px;
+font-weight: 700;
+text-decoration: none;
+cursor: pointer;
+border: none;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: all 0.3s ease;
+font-family: var(--font-main);
+font-size: 1rem;
+}
+
+.btn-primary {
+background-color: var(--neon-accent);
+color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+background-color: #fff;
+box-shadow: 0 0 20px var(--neon-accent);
+transform: translateY(-2px);
+}
+
+.btn-outline {
+background: transparent;
+border: 2px solid var(--text-secondary);
+color: var(--text-primary);
+}
+
+.btn-outline:hover {
+border-color: var(--neon-accent);
+color: var(--neon-accent);
+background: rgba(0, 255, 157, 0.05);
+}
+
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+
+/* =========================================
+MEDIA QUERIES (RESPONSIVE)
+   ========================================= */
+
+/* Tablets y Móviles grandes */
+@media (max-width: 768px) {
+.title {
+    font-size: 3rem; /* Bajamos el peso */
+}
+
+.subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.dynamic-role-container {
+    font-size: 1.2rem;
+    flex-direction: column; /* Apilamos si es necesario */
+    height: auto;
+    gap: 5px;
+}
+}
+
+/* Móviles pequeños (Estilo iPhone SE o Androids chicos) */
+@media (max-width: 480px) {
+.title {
+    font-size: 2.2rem; /* Más compacto */
+}
+
+.cta-container {
+    flex-direction: column; /* Botones uno encima del otro */
+    width: 100%;
+}
+
+.btn {
+    width: 100%; /* Botones ocupan todo el ancho */
+}
+}
