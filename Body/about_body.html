@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David | Stats</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/Style/about_style.css">
+</head>
+<body>
+
+    <nav class="back-nav">
+        <a href="/" class="btn-back">
+            <span class="arrow">←</span> INICIO
+        </a>
+    </nav>
+
+    <main class="about-container">
+        <h2 class="section-title">PLAYER <span class="neon-text">STATS</span></h2>
+
+        <div class="profile-grid">
+            
+            <aside class="profile-card">
+                <div class="avatar-frame">
+                    <img src="https://placehold.co/400x400/1a1a1a/00ff9d?text=DAVID" alt="Profile Pic">
+                </div>
+                <div class="profile-data">
+                    <h3 class="profile-name">DAVID</h3>
+                    <p class="profile-role">Full Stack Developer</p>
+                    <hr class="divider">
+                    <ul class="data-list">
+                        <li><span>LVL:</span> 24</li> <li><span>LOC:</span> Latam</li>
+                        <li><span>GYM:</span> Iron Log</li>
+                    </ul>
+                    <a href="#" class="btn-cv">DESCARGAR CV</a>
+                </div>
+            </aside>
+
+            <section class="stats-content">
+                <div class="bio-box">
+                    <h3>> BIO_LOG</h3>
+                    <p>
+                        Desarrollador apasionado por construir sistemas escalables y eficientes. 
+                        Igual que en el gimnasio, creo en la disciplina y la mejora continua (Kaizen). 
+                        Actualmente enfocado en arquitecturas backend robustas y experiencias frontend limpias.
+                    </p>
+                </div>
+
+                <div class="skills-box">
+                    <h3>> TECH_ATTRIBUTES</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>TypeScript</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%" data-target="90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>React / Frontend</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%" data-target="85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Node / Backend</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%" data-target="80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>SQL / Databases</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%" data-target="75%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="/Action/about_action.ts"></script>
+</body>
+</html>
