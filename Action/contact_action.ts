@@ -1,7 +1,8 @@
-const txt_name = document.getElementById("name") as HTMLInputElement
-const txt_email = document.getElementById("email") as HTMLInputElement
-const txt_message = document.getElementById("message") as HTMLTextAreaElement
-const btn_send = document.querySelector(".btn-submit") as HTMLButtonElement
+const txt_name = document.getElementById("name") as HTMLInputElement;
+const txt_email = document.getElementById("email") as HTMLInputElement;
+const txt_message = document.getElementById("message") as HTMLTextAreaElement;
+const btn_send = document.querySelector(".btn-submit") as HTMLButtonElement;
+const url_send = import.meta.env.VITE_API_URL;
 
 interface ContactData{
     name: String
@@ -18,7 +19,7 @@ btn_send.addEventListener("click", async(e) =>{
     };
 
     try{
-        const response = await fetch("http://127.0.0.1:8000/contact/contact",{
+        const response = await fetch(`${url_send}/contact/contact`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
