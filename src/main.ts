@@ -1,7 +1,8 @@
 const pharses = ["Scalable Backends", "Clean Frontend", "My Dreams"];
 const txt_role = document.querySelector(".role-text");
 const btn_proyects = document.getElementById("btn-projects") as HTMLButtonElement
-const btn_about = document.getElementById("btn*about") as HTMLButtonElement
+const btn_about = document.getElementById("btn-about") as HTMLButtonElement
+const btn_contact = document.getElementById("btn-contact") as HTMLButtonElement
 let actual_phare = pharses[0];
 let i = 0;
 let currentPharses = 0
@@ -36,4 +37,9 @@ btn_proyects.addEventListener("click", (e)=>{
 btn_about.addEventListener("click", (e)=>{
     e.preventDefault()
     window.location.replace("/Body/about_body.html")
+})
+
+btn_contact.addEventListener("click", (e)=>{
+    e.preventDefault()
+    window.location.replace("/Body/contact_body.html")
 })
