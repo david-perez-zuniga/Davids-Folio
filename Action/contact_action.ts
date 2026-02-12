@@ -12,6 +12,7 @@ interface ContactData{
 
 btn_send.addEventListener("click", async(e) =>{
     e.preventDefault()
+
     const ContactJson: ContactData = {
         name: txt_name.value.trim(),
         email: txt_email.value.trim(),
@@ -19,6 +20,9 @@ btn_send.addEventListener("click", async(e) =>{
     };
 
     try{
+        btn_send.disabled = true;
+        btn_send.textContent = "ENVIANDO...";
+        
         const response = await fetch(`${url_send}/contact/contact`,{
             method: "POST",
             headers: {
@@ -28,12 +32,9 @@ btn_send.addEventListener("click", async(e) =>{
             credentials: "include"
             
         });
-        
-        btn_send.disabled = true;
-        btn_send.textContent = "ENVIANDO...";
-        
+                
         const data = await response.json();
-
+        
         if (response.ok) {
             alert("Mensaje enviado exitosamente.");
         } else {
@@ -42,6 +43,12 @@ btn_send.addEventListener("click", async(e) =>{
     } catch (error) {
         console.error("Error fatal:", error);
         alert("Error de conexión con el servidor");
+    }finally{
+        btn_send.disabled = false;
+        btn_send.textContent = "ENVIAR MENSAJE";
+        txt_name.textContent = ""
+        txt_email.textContent = ""
+        txt_message.textContent = ""
     }
     
 });
