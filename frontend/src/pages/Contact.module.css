@@ -1,0 +1,126 @@
+.contactContainer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url('/bg-gym.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+}
+
+.contactInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.contactInfo p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.infoLink {
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-code);
+  transition: 0.3s;
+}
+
+.infoLink:hover {
+  color: var(--neon-accent);
+}
+
+.contactForm {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  background: #050505;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: var(--neon-accent);
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
+
+.btnSubmit {
+  width: 100%;
+  padding: 15px;
+  background: var(--neon-accent);
+  color: var(--bg-dark);
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.btnSubmit:hover:not(:disabled) {
+  background: #fff;
+  box-shadow: 0 0 20px var(--neon-accent);
+  transform: translateY(-2px);
+}
+
+.btnSubmit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contactForm {
+    padding: 25px;
+  }
+}
