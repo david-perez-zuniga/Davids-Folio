@@ -12,6 +12,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Amazon Clone',
+    description:
+      'Clone de la tienda digital Amazon con diseño más moderno. Stack: FastAPI, React, TypeScript, Vite, PostgreSQL.',
+    techStack: ['FastAPI', 'React', 'TypeScript', 'PostgreSQL'],
+    image: '/AmazonClone.jpeg',
+    demo: 'https://ecommerce-store-five-red.vercel.app/',
+    github: 'https://github.com/destripador2000/ecommerce-store.git',
+  },
+  {
     title: 'CodeEnglish',
     description:
       'Web para estudiar inglés con vocabulario, verbos, gramática y más. Stack: FastAPI, React, TypeScript, Vite, PostgreSQL.',
@@ -21,11 +30,13 @@ const projects: Project[] = [
     github: 'https://github.com/destripador2000/CodeEnglish.git',
   },
   {
-    title: 'Analítica Predictiva',
+    title: 'LexConnect',
     description:
-      'Sistema de procesamiento de datos en tiempo real para predecir tendencias de mercado utilizando algoritmos de machine learning.',
-    techStack: ['Python', 'Pandas'],
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCUdG9CJBasEiZcx_2BjxxN9eE5Qu2stjCumOznmgT-t5znwsxQ4jMNgzN5u8OB21wSjqLWtaVnUo-ixwa2FeXxnKJwCMMk0XBUVAkaEqusWnE3PsScXo0Kgms8D_nC8eX0zU4Cd6_qYDxThQZeZy0F1WTwVUEXpNYVzK4z75AEqWJ2ACpxZUeNUslpQgZsnZ3eMkgGO5d2ijl7DAfCy8EcKjMALSNuuR2vQgGPZj6GbBaeZdHUCSoMCWWqLuICyizq2WZNrRoW-EvF',
+      '¿Has escuchado de LinkedIn? Pero para abogados, encuentra a tu abogado según tus necesidades. Landing page. Stack: React, TypeScript, CSS.',
+    techStack: ['React', 'TypeScript', 'CSS'],
+    image: '/LexConnect.jpeg',
+    demo: 'https://lex-connect-nine.vercel.app/',
+    github: 'https://github.com/destripador2000/LexConnect.git',
   },
   {
     title: 'Gestor de Tareas AI',
