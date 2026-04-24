@@ -1,12 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;700;800&family=Alex+Brush&family=Montserrat:wght@700;800&family=Permanent+Marker&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
 :root {
-  --bg-dark: #0a0a0a;
-  --card-bg: #121212;
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1a1;
-  --neon-accent: #00ff9d;
-  --neon-glow: 0 0 10px rgba(0, 255, 157, 0.5);
-  --font-main: 'Montserrat', sans-serif;
-  --font-code: 'Roboto Mono', monospace;
+  --color-surface-dim: #cfdaf2;
+  --color-secondary-container: #dde3eb;
+  --color-surface-container-highest: #d8e3fb;
+  --color-on-secondary-fixed: #161c22;
+  --color-on-tertiary-container: #b8bbbc;
+  --color-surface-variant: #d8e3fb;
+  --color-error-container: #ffdad6;
+  --color-primary: #00355f;
+  --color-tertiary-fixed-dim: #c4c7c9;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface-variant: #42474f;
+  --color-on-primary-fixed: #001c37;
+  --color-surface-bright: #f9f9ff;
+  --color-on-tertiary-fixed-variant: #444749;
+  --color-on-primary-fixed-variant: #07497d;
+  --color-surface-container-high: #dee8ff;
+  --color-outline-variant: #c2c7d1;
+  --color-on-surface: #111c2d;
+  --color-tertiary-fixed: #e0e3e5;
+  --color-tertiary-container: #474b4d;
+  --color-on-primary: #ffffff;
+  --color-background: #f9f9ff;
+  --color-on-tertiary-fixed: #191c1e;
+  --color-outline: #727780;
+  --color-on-secondary: #ffffff;
+  --color-error: #ba1a1a;
+  --color-primary-fixed-dim: #a0c9ff;
+  --color-primary-fixed: #d2e4ff;
+  --color-tertiary: #313436;
+  --color-on-background: #111c2d;
+  --color-secondary-fixed: #dde3eb;
+  --color-surface-tint: #2d6197;
+  --color-on-error: #ffffff;
+  --color-primary-container: #0f4c81;
+  --color-inverse-on-surface: #ecf1ff;
+  --color-on-secondary-fixed-variant: #41474e;
+  --color-secondary-fixed-dim: #c1c7cf;
+  --color-on-error-container: #93000a;
+  --color-surface: #f9f9ff;
+  --color-on-primary-container: #8ebdf9;
+  --color-on-secondary-container: #5f656c;
+  --color-surface-container: #e7eeff;
+  --color-surface-container-low: #f0f3ff;
+  --color-inverse-primary: #a0c9ff;
+  --color-on-tertiary: #ffffff;
+  --color-secondary: #595f66;
+  --color-inverse-surface: #263143;
+
+  --font-body: 'Inter', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
+  --font-script: 'Alex Brush', cursive;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-marker: 'Permanent Marker', cursive;
+  --font-sacramento: 'Sacramento', cursive;
+
+  --spacing-gutter: 24px;
+  --spacing-mobile: 16px;
+  --spacing-unit: 4px;
+  --spacing-section: 120px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 32px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
 }
 
 * {
@@ -16,11 +79,14 @@
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-  font-family: var(--font-main);
-  overflow-x: hidden;
-  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-on-surface);
+  background-color: var(--color-background);
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXGOnEx2KtJ23ATsyZud0jYofXCexBtLnYUyo0kjDHjGb5VJYsaXyIbAj6yCoEmQIPmYA3oj1RtVljyUyrmPbLPjFAjoa1vJgwmSxVOtiGrTW0OIh-BpZO9P6SJjhFlGMBoFr1BvlyQlohL5IYouXfRVzkFtQsUoncumwVF2vRXsSPFtdsQmd9S6EVFjQxMCEO8NhNgLGY5ZRUxTz-MO7a-3htEKNqa0z83GfL5ADCbShuiJH5KxGE9Pz7MLrC6rCCGemKuty3Cd2C');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 400px;
+  overflow: hidden;
 }
 
 a {
@@ -31,24 +97,6 @@ a {
 button {
   cursor: pointer;
   font-family: inherit;
-}
-
-.neon-text {
-  color: var(--neon-accent);
-  text-shadow: var(--neon-glow);
-}
-
-.section-title {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 50px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
+  border: none;
+  background: none;
 }
