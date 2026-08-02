@@ -1,0 +1,114 @@
+---
+const projects = [
+	{
+		title: 'IronGear',
+		image: '/IronGear.webp',
+		alt: 'A premium e-commerce interface for gym equipment called IronGear. The UI is minimalist with high-quality photography of matte black fitness gear. Soft shadows and a light grey background create a modern, professional look. The color palette features slate blue accents for buttons and navigation elements.',
+		description: 'Plataforma integral de e-commerce orientada al sector fitness.',
+		tags: ['FastAPI', 'React'],
+		github: 'https://github.com/david-perez-zuniga/Iron-Gear',
+		verMas: 'https://github.com/david-perez-zuniga/Iron-Gear',
+	},
+	{
+		title: 'Code English',
+		image: '/CodeEnglish.webp',
+		alt: 'A clean and bright educational platform interface named CodeEnglish. The design features interactive learning cards, soft blue progress bars, and a lot of white space. The overall aesthetic is calm and focused, perfect for a language learning application. High-end typography and subtle glassmorphism effects are visible.',
+		description: 'Aplicación web diseñada para facilitar el aprendizaje continuo del idioma inglés.',
+		tags: ['FastAPI', 'Typescript'],
+		github: 'https://github.com/david-perez-zuniga/CodeEnglish',
+		verMas: 'https://code-english-beta.vercel.app',
+	},
+	{
+		title: 'TheTechLawyer',
+		image: '/TheTechLawyer.webp',
+		alt: 'A sophisticated professional networking site for lawyers called LexConnect. The design uses deep navy and soft white colors with elegant serif typography. The layout resembles a professional directory with clean profile cards and refined icons. The interface communicates trust and authority through a minimalist, soft-lite style.',
+		description: 'Encuentra un abogado según tus necesidades y criterios específicos.',
+		tags: ['React', 'CSS Module'],
+		github: 'https://github.com/david-perez-zuniga/LexConnect',
+		verMas: 'https://the-tech-lawyer.vercel.app/',
+	},
+	{
+		title: 'OnTheWayToTheGoal',
+		image: '/OnTheWayToTheGoal.webp',
+		alt: 'A productivity app dashboard named OnTheWayToTheGoal. It features colorful but soft circular progress charts, a clean task list, and a serene light-mode interface. The design focuses on motivational feedback through gentle visual cues and a harmonious layout. Soft lite aesthetic with plenty of negative space and rounded corners.',
+		description: 'Interfaz intuitiva para gestionar progreso continuo y alcanzar objetivos.',
+		tags: ['NodeJS', 'Express'],
+		github: 'https://github.com/david-perez-zuniga/On-the-way-to-the-goal',
+		verMas: 'https://on-the-way-to-the-goal.vercel.app',
+	},
+	{
+		title: 'UbiLove',
+		image: '/UbiLove.webp',
+		alt: 'A mobile map application interface called UbiLove. The UI displays a clean map with soft-colored pins and a smooth bottom sheet for location details. The style is minimalist and high-end, using a soft-lite theme with subtle shadows and elegant typography. Focus on geolocation and user-friendly navigation in a mobile context.',
+		description: 'Conecta con moteles cercanos mediante consultas de ubicación precisas.',
+		tags: ['ReactNative', 'FastAPI'],
+		github: null,
+		verMas: '#',
+	},
+];
+---
+
+<section class="py-section-padding bg-surface-container-low scroll-mt-16" id="projects">
+	<div class="max-w-container-max mx-auto px-gutter">
+		<div class="text-center mb-16">
+			<h2 class="font-headline-md text-headline-md text-primary">Proyectos</h2>
+			<p class="text-on-surface-variant mt-2">Una muestra de ingeniería y diseño full-stack.</p>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{
+				projects.map((project) => (
+					<div
+						class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30 soft-shadow flex flex-col h-full"
+					>
+						<div class="overflow-hidden">
+							<img
+								class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+								src={project.image}
+								alt={project.alt}
+								loading="lazy"
+							/>
+						</div>
+						<div class="p-6 flex flex-col flex-grow">
+							<h3 class="font-headline-sm text-headline-sm text-on-surface">{project.title}</h3>
+							<p class="text-on-surface-variant mt-2 text-body-md">{project.description}</p>
+							<div class="mt-4 flex flex-wrap gap-1">
+								{
+									project.tags.map((tag) => (
+										<span class="text-[10px] font-bold uppercase tracking-wider text-secondary bg-secondary-container/30 px-2 py-0.5 rounded">
+											{tag}
+										</span>
+									))
+								}
+							</div>
+							<div class="mt-auto pt-6 flex gap-3">
+								{
+									project.github && (
+										<a
+											class="flex-1 text-center py-2 bg-primary text-on-primary rounded-lg text-label-md hover:opacity-90 transition-all"
+											href={project.github}
+											target="_blank"
+											rel="noreferrer"
+										>
+											GitHub
+										</a>
+									)
+								}
+								<a
+									class={`text-center py-2 border border-outline-variant text-on-surface-variant rounded-lg text-label-md hover:bg-surface-container transition-all ${
+										project.github ? 'flex-1' : 'w-full'
+									}`}
+									href={project.verMas}
+									{...(project.verMas.startsWith('http')
+										? { target: '_blank', rel: 'noreferrer' }
+										: {})}
+								>
+									Ver más
+								</a>
+							</div>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

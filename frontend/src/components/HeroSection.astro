@@ -1,0 +1,46 @@
+---
+import Icon from './Icon';
+import { MdChat, MdPhotoCamera, MdPublic, MdCode } from 'react-icons/md';
+
+const socials = [
+	{ icon: MdChat, label: 'WhatsApp', href: 'https://wa.me/50576357999' },
+	{
+		icon: MdPhotoCamera,
+		label: 'Instagram',
+		href: 'https://www.instagram.com/hum_zuniga?igsh=MXMzMXMwNjk1N3J0NA==',
+	},
+	{
+		icon: MdPublic,
+		label: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/humberto-zuniga-b42140386?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+	},
+	{ icon: MdCode, label: 'GitHub', href: 'https://github.com/david-perez-zuniga' },
+];
+---
+
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden px-gutter">
+	<div class="absolute inset-0 ambient-glow -z-10"></div>
+	<div class="max-w-container-max w-full text-center space-y-6 py-section-padding">
+		<h1 class="font-display-lg text-display-lg md:text-[64px] text-primary tracking-tight">
+			David Humberto Perez Zuniga
+		</h1>
+		<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">
+			Fullstack Developer &amp; QA Analyst
+		</p>
+		<div class="flex justify-center gap-6 pt-4">
+			{
+				socials.map((social) => (
+					<a
+						class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant hover:border-primary hover:text-primary transition-all text-secondary"
+						href={social.href}
+						target="_blank"
+						rel="noreferrer"
+						aria-label={social.label}
+					>
+						<Icon icon={social.icon} className="text-2xl" />
+					</a>
+				))
+			}
+		</div>
+	</div>
+</section>

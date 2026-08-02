@@ -1,0 +1,56 @@
+---
+const experiences = [
+	{
+		period: 'Julio 2026 – Actualidad',
+		title: 'Analista de QA (Pasantía)',
+		company: 'Banco Atlántida',
+		description:
+			'Ejecución de pruebas funcionales exhaustivas en aplicaciones móviles y web para garantizar la estabilidad y calidad de los productos digitales. La labor se centra en la detección de anomalías en la interfaz y experiencia de usuario (UI/UX), junto con la elaboración de informes técnicos detallados sobre los hallazgos. Esta documentación precisa de bugs sirve como puente estratégico con el equipo de desarrollo para agilizar el ciclo de depuración de software, optimizando directamente la experiencia del usuario final y asegurando entregas continuas de alta calidad.',
+		active: true,
+	},
+	{
+		period: 'Junio 2025 – Marzo 2026',
+		title: 'Desarrollador de Base de Datos (Pasantía)',
+		company: 'Hospital Militar Escuela Dr. Alejandro Dávila Bolaños',
+		description:
+			'Desarrollo e implementación de un sistema de base de datos diseñado para digitalizar el registro manual de llamadas y optimizar la gestión de la información. El proyecto abarcó desde la estructuración de tablas relacionales hasta la modernización de formularios preexistentes, elevando significativamente la integridad de los datos y la experiencia del usuario. Adicionalmente, se ejecutó el mantenimiento y la refactorización de consultas SQL en bases de datos heredadas, adaptando el código a los nuevos requerimientos operativos para asegurar un flujo de trabajo eficiente y adaptado a las necesidades institucionales.',
+		active: false,
+	},
+];
+---
+
+<section class="py-section-padding bg-surface-container-lowest scroll-mt-16" id="experience">
+	<div class="max-w-container-max mx-auto px-gutter">
+		<div class="flex flex-col md:flex-row gap-12">
+			<div class="md:w-1/3">
+				<h2 class="font-headline-md text-headline-md text-primary mb-4">Experiencia</h2>
+				<div class="h-1 w-12 bg-primary-fixed-dim rounded-full"></div>
+			</div>
+			<div class="md:w-2/3 space-y-12">
+				{
+					experiences.map((experience) => (
+						<div class="relative pl-8 border-l border-outline-variant">
+							<div
+								class={`absolute -left-[5px] top-1 w-2 h-2 rounded-full ${
+									experience.active ? 'bg-primary' : 'bg-outline'
+								}`}
+							></div>
+							<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">
+								{experience.period}
+							</span>
+							<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">
+								{experience.title}
+							</h3>
+							<p class="font-body-md text-body-md text-on-surface-variant font-medium">
+								{experience.company}
+							</p>
+							<p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+								{experience.description}
+							</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>

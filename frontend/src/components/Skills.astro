@@ -1,0 +1,42 @@
+---
+import Icon from './Icon';
+import { MdTerminal, MdWeb, MdStorage, MdBuild } from 'react-icons/md';
+
+const skills = [
+	{ icon: MdTerminal, title: 'Backend', items: ['Python', 'FastAPI', 'NodeJS', 'Express'] },
+	{ icon: MdWeb, title: 'Frontend', items: ['React', 'ReactNative', 'TypeScript', 'Astro'] },
+	{ icon: MdStorage, title: 'Database', items: ['PostgreSQL', 'Prisma', 'SQLite', 'Alembic'] },
+	{ icon: MdBuild, title: 'Tools', items: ['Git', 'Docker', 'Linux', 'Postman'] },
+];
+---
+
+<section class="py-section-padding bg-surface scroll-mt-16" id="skills">
+	<div class="max-w-container-max mx-auto px-gutter">
+		<h2 class="font-headline-md text-headline-md text-primary text-center mb-16">
+			Experiencia Técnica
+		</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+			{
+				skills.map((skill) => (
+					<div class="p-8 bg-surface-container-lowest border border-outline-variant/30 rounded-xl soft-shadow">
+						<div class="text-primary-container mb-6">
+							<Icon icon={skill.icon} className="text-4xl" />
+						</div>
+						<h3 class="font-label-md text-label-md font-bold text-on-surface mb-4 uppercase tracking-tighter">
+							{skill.title}
+						</h3>
+						<div class="flex flex-wrap gap-2">
+							{
+								skill.items.map((item) => (
+									<span class="px-3 py-1 bg-surface-container text-on-surface-variant text-label-md rounded-full">
+										{item}
+									</span>
+								))
+							}
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
